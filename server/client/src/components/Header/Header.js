@@ -13,7 +13,7 @@ class Header extends Component {
           <li>
             <a 
               href="/auth/google"
-              style={{color: '#000000'}}
+              style={{color: '#000000', margin: '0 10px 0 0'}}
             >
               Login With Google
             </a>
@@ -29,7 +29,7 @@ class Header extends Component {
               Total Credits: {this.props.auth.credits}
             </li>,
             <li key="2">
-              <a href="/api/logout" style={{color: '#000000'}}>Logout</a>
+              <a href="/api/logout" style={{color: '#000000', margin: '0 10px 0 0'}}>Logout</a>
             </li>
           ]
         );
@@ -38,13 +38,13 @@ class Header extends Component {
 
   render() {
     return (
-      <div>
+      <div className="navbar-fixed">
         <nav>
           <div className='nav-wrapper' style={{ backgroundColor: '#FFFFFF', color: '#000000' }}>
             <Link 
               to={this.props.auth ? '/surveys' : '/'}
               className='left brand-logo'
-              style={{color: '#000000'}}
+              style={{color: '#000000', margin: '0 0 0 10px'}}
             >
               eMaily
             </Link>
